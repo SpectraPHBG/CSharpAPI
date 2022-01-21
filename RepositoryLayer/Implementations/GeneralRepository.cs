@@ -11,10 +11,10 @@ namespace RepositoryLayer.Implementations
 {
     public class GenericRepository<TEntity> where TEntity : class
     {
-        internal AndroidCalculatorDBContext context;
+        internal BankSystemAPIDBContext context;
         internal DbSet<TEntity> dbSet;
 
-        public GenericRepository(AndroidCalculatorDBContext context)
+        public GenericRepository(BankSystemAPIDBContext context)
         {
             this.context = context;
             this.dbSet = context.Set<TEntity>();

@@ -10,19 +10,85 @@ namespace Data_Layer.Context
 {
     public class UnitOfWork : IDisposable
     {
-        private AndroidCalculatorDBContext context = new AndroidCalculatorDBContext();
-        private GenericRepository<CalculatorEquation> equationRepository;
+        private BankSystemAPIDBContext context = new BankSystemAPIDBContext();
+        private GenericRepository<Client> clientRepository;
+        private GenericRepository<City> cityRepository;
+        private GenericRepository<Bank_Employee> bankEmployeeRepository;
+        private GenericRepository<Bank_Branch> bankBranchRepository;
+        private GenericRepository<Bank_Account> bankAccountRepository;
+        private GenericRepository<Bank> bankRepository;
 
-        public GenericRepository<CalculatorEquation> EquationRepository
+        public GenericRepository<Client> ClientRepository
         {
             get
             {
 
-                if (this.equationRepository == null)
+                if (this.clientRepository == null)
                 {
-                    this.equationRepository = new GenericRepository<CalculatorEquation>(context);
+                    this.clientRepository = new GenericRepository<Client>(context);
                 }
-                return equationRepository;
+                return clientRepository;
+            }
+        }
+
+        public GenericRepository<City> CityRepository
+        {
+            get
+            {
+
+                if (this.cityRepository == null)
+                {
+                    this.cityRepository = new GenericRepository<City>(context);
+                }
+                return cityRepository;
+            }
+        }
+        public GenericRepository<Bank_Employee> BankEmployeeRepository
+        {
+            get
+            {
+
+                if (this.bankEmployeeRepository == null)
+                {
+                    this.bankEmployeeRepository = new GenericRepository<Bank_Employee>(context);
+                }
+                return bankEmployeeRepository;
+            }
+        }
+        public GenericRepository<Bank_Branch> BankBranchRepository
+        {
+            get
+            {
+
+                if (this.bankBranchRepository == null)
+                {
+                    this.bankBranchRepository = new GenericRepository<Bank_Branch>(context);
+                }
+                return bankBranchRepository;
+            }
+        }
+        public GenericRepository<Bank_Account> BankAccountRepository
+        {
+            get
+            {
+
+                if (this.bankAccountRepository == null)
+                {
+                    this.bankAccountRepository = new GenericRepository<Bank_Account>(context);
+                }
+                return bankAccountRepository;
+            }
+        }
+        public GenericRepository<Bank> BankRepository
+        {
+            get
+            {
+
+                if (this.bankRepository == null)
+                {
+                    this.bankRepository = new GenericRepository<Bank>(context);
+                }
+                return bankRepository;
             }
         }
 

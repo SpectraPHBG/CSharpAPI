@@ -70,8 +70,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DTOs\CalculatorEquationDTO.cs" />
-    <Compile Include="ManagementServices\CalculatorEquationManagementService.cs" />
+    <Compile Include="DTOs\BankDTO.cs" />
+    <Compile Include="DTOs\Bank_AccountDetailedDTO.cs" />
+    <Compile Include="DTOs\Bank_AccountDTO.cs" />
+    <Compile Include="DTOs\Bank_BranchDTO.cs" />
+    <Compile Include="DTOs\CityDTO.cs" />
+    <Compile Include="DTOs\ClientDetailedDTO.cs" />
+    <Compile Include="DTOs\ClientDTO.cs" />
+    <Compile Include="ManagementServices\BankAccountManagementService.cs" />
+    <Compile Include="ManagementServices\BankBranchManagementService.cs" />
+    <Compile Include="ManagementServices\BankManagementService.cs" />
+    <Compile Include="ManagementServices\CityManagementService.cs" />
+    <Compile Include="ManagementServices\ClientManagementService.cs" />
+    <Compile Include="ManagementServices\TokenAuthenticationManagementService.cs" />
+    <Compile Include="ManagementServices\TransactionManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Data Layer\Data Layer.csproj">

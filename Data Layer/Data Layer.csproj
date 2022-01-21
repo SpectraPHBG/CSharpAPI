@@ -61,8 +61,13 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
-    <Compile Include="Context\AndroidCalculatorDBContext.cs" />
-    <Compile Include="Entities\CalculatorEquation.cs" />
+    <Compile Include="Entities\Bank.cs" />
+    <Compile Include="Context\BankSystemAPIDBContext.cs" />
+    <Compile Include="Entities\Bank_Account.cs" />
+    <Compile Include="Entities\Bank_Branch.cs" />
+    <Compile Include="Entities\City.cs" />
+    <Compile Include="Entities\Client.cs" />
+    <Compile Include="Entities\Bank_Employee.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
